@@ -1,23 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import MyNav from "./components/MyNav";
-import MyFooter from "./components/MyFooter";
-import Welcome from "./components/Welcome";
-import AllTheBooks from "./components/AllTheBooks";
-import BookList from "./components/BookList";
+import CustomNavbar from "./component/CustomNavbar";
+import MyFooter from "./component/MyFooter";
+import Welcome from "./component/Welcome";
+import AllTheBooks from "./component/AllTheBooks";
 import { Container } from "react-bootstrap";
-import fantasy from "./data/fantasy.json";
-
 function App() {
   return (
-    <>
-      <MyNav />
-      <Container>
-        <Welcome />
-        <BookList objs={fantasy} />
-      </Container>
+    <Container fluid>
+      <CustomNavbar />
+      <Welcome />
+      <AllTheBooks />
       <MyFooter />
-    </>
+    </Container>
   );
 }
 
